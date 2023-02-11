@@ -1,0 +1,44 @@
+{
+  "name": "css-variable-parser",
+  "version": "0.0.0",
+  "description": "Extract CSS Variables from input",
+  "main": "lib/index.js",
+  "bin": {
+    "parse-css": "bin/parse-css"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "parse": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:ci": "echo \"No tests yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veiko/css-variable-parser.git"
+  },
+  "keywords": [
+    "css",
+    "css",
+    "variables"
+  ],
+  "author": "Veronica Carrillo-Marquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veiko/css-variable-parser/issues"
+  },
+  "homepage": "https://github.com/veiko/css-variable-parser#readme",
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.13.0",
+    "esm": "^3.2.25",
+    "jest": "^29.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "minimist": "^1.2.8"
+  }
+}

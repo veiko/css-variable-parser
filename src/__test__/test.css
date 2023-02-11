@@ -1,0 +1,250 @@
+// Reset and dependencies
+@import '_normalize';
+
+// Core variables and mixins
+@import '_base';
+
+//Font-face
+//Roboto Regular
+@include font-face('Roboto', 'Roboto Regular', 'Roboto-Regular', 400);
+//Roboto Italic
+@include font-face('Roboto', 'Roboto Italic', 'Roboto-Italic', 400, italic);
+//Roboto Bold
+@include font-face('Roboto', 'Roboto Bold', 'Roboto-Bold', 700);
+//Roboto Italic Bold
+@include font-face(
+  'Roboto',
+  'Roboto ItalicBold',
+  'Roboto-ItalicBold',
+  700,
+  italic
+);
+
+@import '_print';
+
+// Core CSS
+@import '_reboot';
+@import '_type';
+@import '_ca_colors.scss';
+
+:root {
+  // @deprecated - all colors start with --csvp- will be replaced with new names start with --csvp-
+  --csvp-color-white: #fff;
+  --csvp-color-black: #000;
+
+  --csvp-color-grey-100: #f7f5f5;
+  --csvp-color-grey-200: #eeeeee;
+  --csvp-color-grey-250: #dddddd;
+  --csvp-color-grey-300: #cccccc;
+  --csvp-color-grey-350: #b9b9b9;
+  --csvp-color-grey-400: #a5a5a5;
+  --csvp-color-grey-450: #8c8c8c;
+  --csvp-color-grey-500: #848484;
+  --csvp-color-grey-550: #7d7b7b;
+  --csvp-color-grey-600: #707070;
+  --csvp-color-grey-700: #505050;
+  --csvp-color-grey-800: #393939;
+  --csvp-color-grey-900: #231f20;
+
+  --csvp-color-green-01: #5cd949;
+  --csvp-color-green-02: #40cc27;
+  --csvp-color-green-03: #23b500;
+  --csvp-color-green-05: #22a835;
+
+  --csvp-color-blue-01: #4c94fc;
+  --csvp-color-blue-02: #1067e5;
+  --csvp-color-blue-03: #0e5ead;
+  --csvp-color-blue-04: #3875d9;
+
+  // red
+  --csvp-color-red-01: #fb405a;
+  --csvp-color-red-02: #f8dbd9;
+
+  // yellow
+  --csvp-color-yellow-01: #feda33;
+  --csvp-color-yellow-02: #fff4d0;
+  --csvp-color-yellow-03: #fff4a1;
+
+  // grayscale
+  --csvp-color-white: var(--WHITE_01);
+
+  --csvp-color-light-grey-01: var(--LIGHT_GREY_01);
+  --csvp-color-light-grey-02: var(--LIGHT_GREY_02);
+  --csvp-color-light-grey-03: var(--LIGHT_GREY_03);
+  --csvp-color-light-grey-04: var(--LIGHT_GREY_04);
+  --csvp-color-light-grey-05: var(--LIGHT_GREY_05);
+  --csvp-color-light-grey-06: var(--LIGHT_GREY_06);
+
+  --csvp-color-dark-grey-01: var(--DARK_GREY_01);
+  --csvp-color-dark-grey-02: var(--DARK_GREY_02);
+  --csvp-color-dark-grey-03: var(--DARK_GREY_03);
+  --csvp-color-dark-grey-04: var(--DARK_GREY_04);
+  --csvp-color-dark-grey-05: var(--DARK_GREY_05);
+  --csvp-color-dark-grey-06: var(--DARK_GREY_06);
+  --csvp-color-dark-grey-07: var(--DARK_GREY_07);
+
+  --csvp-color-black-01: var(--BLACK_01);
+
+  // orange
+  --csvp-color-orange-01: var(--ORANGE_01);
+  --csvp-color-orange-02: var(--ORANGE_02);
+  --csvp-color-orange-03: var(--ORANGE_03);
+  --csvp-color-orange-04: var(--ORANGE_04);
+
+  // blue
+  --csvp-color-cyan-01: var(--CYAN_01);
+  --csvp-color-cyan-02: var(--CYAN_02);
+  --csvp-color-cyan-03: var(--CYAN_03);
+  --csvp-color-cyan-04: var(--CYAN_04);
+  --csvp-color-cyan-05: var(--CYAN_05);
+  --csvp-color-cyan-06: var(--CYAN_06);
+  --csvp-color-cyan-07: var(--CYAN_07);
+
+  --csvp-color-blue-01: var(--BLUE_01);
+  --csvp-color-blue-02: var(--BLUE_02);
+  --csvp-color-blue-03: var(--BLUE_03);
+  --csvp-color-blue-04: var(--BLUE_04);
+  --csvp-color-blue-05: var(--BLUE_05);
+  --csvp-color-blue-06: var(--BLUE_06);
+  --csvp-color-blue-07: var(--BLUE_07);
+  --csvp-color-blue-08: var(--BLUE_08);
+  --csvp-color-blue-09: var(--BLUE_09);
+
+  // purple
+  --csvp-color-purple-01: var(--PURPLE_01);
+  --csvp-color-purple-02: var(--PURPLE_02);
+
+  --csvp-color-magenta-01: var(--MAGENTA_01);
+  --csvp-color-magenta-02: var(--MAGENTA_02);
+  --csvp-color-magenta-03: var(--MAGENTA_03);
+
+  --csvp-color-pink-01: var(--PINK_01);
+  --csvp-color-pink-02: var(--PINK_02);
+  --csvp-color-pink-03: var(--PINK_03);
+
+  // green
+  --csvp-color-green-01: var(--GREEN_01);
+  --csvp-color-green-02: var(--GREEN_02);
+  --csvp-color-green-03: var(--GREEN_03);
+  --csvp-color-green-04: var(--GREEN_04);
+  --csvp-color-green-05: var(--GREEN_05);
+  --csvp-color-green-06: var(--GREEN_06);
+  --csvp-color-green-07: var(--GREEN_07);
+  --csvp-color-green-08: var(--GREEN_08);
+
+  // red
+  --csvp-color-red-01: var(--RED_01);
+  --csvp-color-red-02: var(--RED_02);
+
+  // yellow
+  --csvp-color-yellow-01: var(--YELLOW_01);
+  --csvp-color-yellow-02: var(--YELLOW_02);
+  --csvp-color-yellow-03: var(--YELLOW_03);
+
+  --csvp-color-graph-01A: var(--GRAPH_01A);
+  --csvp-color-graph-01B: var(--GRAPH_01B);
+  --csvp-color-graph-01C: var(--GRAPH_01C);
+  --csvp-color-graph-01D: var(--GRAPH_01D);
+  --csvp-color-graph-01E: var(--GRAPH_01E);
+  --csvp-color-graph-01F: var(--GRAPH_01F);
+  --csvp-color-graph-01G: var(--GRAPH_01G);
+  --csvp-color-graph-01H: var(--GRAPH_01H);
+
+  --csvp-color-graph-02A: var(--GRAPH_02A);
+  --csvp-color-graph-02B: var(--GRAPH_02B);
+  --csvp-color-graph-02C: var(--GRAPH_02C);
+  --csvp-color-graph-02D: var(--GRAPH_02D);
+
+  --csvp-color-graph-03A: var(--GRAPH_03A);
+  --csvp-color-graph-03B: var(--GRAPH_03B);
+  --csvp-color-graph-03C: var(--GRAPH_03C);
+  --csvp-color-graph-03D: var(--GRAPH_03D);
+
+  --csvp-color-graph-04A: var(--GRAPH_04A);
+  --csvp-color-graph-04B: var(--GRAPH_04B);
+  --csvp-color-graph-04C: var(--GRAPH_04C);
+
+  --csvp-font-family: 'Roboto', sans-serif;
+
+  --csvp-overlay-01: rgba(0, 0, 0, 0.35);
+  --csvp-box-shadow-01: rgba(0, 0, 0, 0.2);
+  --csvp-box-shadow-02: rgba(100, 100, 100, 0.1);
+
+  // text
+  --csvp-text-01: 500 15px var(--csvp-font-family);
+  --csvp-text-03: 700 15px var(--csvp-font-family);
+  --csvp-text-04: 500 12px var(--csvp-font-family);
+  --csvp-text-06: 700 12px var(--csvp-font-family);
+  --csvp-text-07: 700 14px var(--csvp-font-family);
+  --csvp-text-08: 14px var(--csvp-font-family);
+  --csvp-text-09: 10px var(--csvp-font-family);
+  --csvp-text-10: 16px var(--csvp-font-family);
+  --csvp-text-11: 700 16px var(--csvp-font-family);
+  --csvp-text-12: 700 10px var(--csvp-font-family);
+
+  // accordion
+  --csvp-accordion-button-height: 50px;
+  --csvp-accordion-button-text: var(--csvp-text-07);
+  --csvp-accordion-item-border: 1px solid var(--csvp-color-grey-250);
+
+  // calendar
+  --csvp-calendar-background: transparent;
+  --csvp-calendar-caption-color: var(--csvp-color-dark-grey-04);
+  --csvp-calendar-header-border-color: var(--csvp-color-light-grey-02);
+  --csvp-calendar-header-color: var(--csvp-color-dark-grey-04);
+  --csvp-calendar-background: var(--csvp-color-white);
+  --csvp-calendar-cell-border-radius: 32px;
+  --csvp-calendar-cell-color: var(--csvp-color-dark-grey-04);
+  --csvp-calendar-cell-disabled-background: var(--csvp-color-light-grey-01);
+  --csvp-calendar-cell-disabled-border-radius: 0px;
+  --csvp-calendar-cell-disabled-color: var(--csvp-color-light-grey-03);
+  --csvp-calendar-cell-hover-color: var(--csvp-color-light-grey-02);
+  --csvp-calendar-cell-outside-color: var(--csvp-color-light-grey-05);
+  --csvp-calendar-cell-selected-background: var(--csvp-color-blue-01);
+  --csvp-calendar-cell-selected-border-radius: 32px;
+  --csvp-calendar-cell-selected-color: var(--csvp-color-white);
+  --csvp-calendar-cell-today-color: var(--csvp-color-blue-01);
+  --csvp-calendar-cell-size: 32px;
+  --csvp-calendar-nav-color: var(--csvp-color-blue-01);
+  --csvp-calendar-nav-color-active: var(--csvp-color-blue-03);
+  --csvp-calendar-nav-color-disabled: var(--csvp-color-light-grey-03);
+  --csvp-calendar-nav-color-hover: var(--csvp-color-blue-02);
+
+  // datepicker
+  --csvp-datepicker-background: var(--csvp-color-white);
+  --csvp-datepicker-border-radius: 5px;
+  --csvp-datepicker-border-color: var(--csvp-color-light-grey-04);
+  --csvp-datepicker-icon-height: 21px;
+  --csvp-datepicker-icon-width: 19px;
+  --csvp-datepicker-input-min-width: 130px;
+
+  // tooltip
+  --csvp-tooltip-background: var(--csvp-color-blue-04);
+}
+
+:global {
+  // used as a backdoor to enforce font defaults
+  // primarily used to override styleguidist behavior
+  .text-base {
+    color: $body-color;
+    font-family: $font-family-base;
+  }
+
+  .unselectable {
+    user-select: none;
+  }
+
+  // text Alignment
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+}
