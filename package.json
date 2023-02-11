@@ -1,6 +1,6 @@
 {
   "name": "css-variable-parser",
-  "version": "0.0.0",
+  "version": "1.0.3",
   "description": "Extract CSS Variables from input",
   "main": "lib/index.js",
   "bin": {
