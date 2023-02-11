@@ -1,4 +1,5 @@
 src
 .gitignore
+jest.config.js
 test.css
 tsconfig.json

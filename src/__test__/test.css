@@ -1,34 +1,4 @@
-// Reset and dependencies
-@import '_normalize';
-
-// Core variables and mixins
-@import '_base';
-
-//Font-face
-//Roboto Regular
-@include font-face('Roboto', 'Roboto Regular', 'Roboto-Regular', 400);
-//Roboto Italic
-@include font-face('Roboto', 'Roboto Italic', 'Roboto-Italic', 400, italic);
-//Roboto Bold
-@include font-face('Roboto', 'Roboto Bold', 'Roboto-Bold', 700);
-//Roboto Italic Bold
-@include font-face(
-  'Roboto',
-  'Roboto ItalicBold',
-  'Roboto-ItalicBold',
-  700,
-  italic
-);
-
-@import '_print';
-
-// Core CSS
-@import '_reboot';
-@import '_type';
-@import '_ca_colors.scss';
-
 :root {
-  // @deprecated - all colors start with --csvp- will be replaced with new names start with --csvp-
   --csvp-color-white: #fff;
   --csvp-color-black: #000;
 
@@ -223,13 +193,6 @@
 }
 
 :global {
-  // used as a backdoor to enforce font defaults
-  // primarily used to override styleguidist behavior
-  .text-base {
-    color: $body-color;
-    font-family: $font-family-base;
-  }
-
   .unselectable {
     user-select: none;
   }
