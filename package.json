@@ -38,5 +38,28 @@
   },
   "dependencies": {
     "esm": "^3.2.25"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ],
+          "message": "build: ${nextRelease.gitTag}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
   }
 }
