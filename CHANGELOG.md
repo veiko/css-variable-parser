@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/veiko/css-variable-parser/compare/v1.0.4...v1.0.5) (2023-02-12)
+
+
+### Bug Fixes
+
+* type module ([3facb26](https://github.com/veiko/css-variable-parser/commit/3facb26f26af9b929054f7fbbb3d42bd0e4485b3))
+
 ## [1.0.4](https://github.com/veiko/css-variable-parser/compare/v1.0.3...v1.0.4) (2023-02-11)
 
 
