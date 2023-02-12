@@ -61,5 +61,6 @@
       ],
       "@semantic-release/github"
     ]
-  }
+  },
+  "type": "module"
 }
